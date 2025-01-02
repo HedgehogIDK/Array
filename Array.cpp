@@ -18,3 +18,9 @@ Array::Array(int mas_p[], int size_p) :size{ size_p }, mas{ new int[size_p] } {
 	}
 
 }
+
+Array::Array(Array&& obj)noexcept {
+	mas = obj.mas;
+	size = obj.size;
+	obj.mas = nullptr;
+}

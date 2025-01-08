@@ -7,18 +7,18 @@ private:
 	int* mas;
 	int size;
 public:
-	//Конструкторы 
+	//ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г» 
 	Array() = default;
 	Array(int mas_p[], int size_p);
 
-	//Методы и аксессоры
+	//ГЊГҐГІГ®Г¤Г» ГЁ Г ГЄГ±ГҐГ±Г±Г®Г°Г»
 	int at(int num);
-	int get_SIZE() { return size; }
+	int get_SIZE()noexcept { return size; }
 
-	//Конструкторы переноса
+	//ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г» ГЇГҐГ°ГҐГ­Г®Г±Г 
 	Array(Array&& obj)noexcept;
 
-	//Деструктор
-	~Array() { delete mas; }
+	//Г„ГҐГ±ГІГ°ГіГЄГІГ®Г°
+	~Array()noexcept { delete mas; }
 };
 
